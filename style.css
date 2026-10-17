@@ -1,0 +1,22 @@
+@font-face{font-family:'Press Start 2P';font-display:swap;src:url('../game/fonts/PressStart2P.woff2') format('woff2')}
+:root{color-scheme:dark;--bg:#0b0415;--fg:#ffe9a8;--cy:#7fe8ff;--pk:#ff5a8a;--mu:#a98bc9;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 0,#4a1a6e 0,#2b1260 30%,var(--bg) 70%) fixed;color:var(--fg);font-family:'Press Start 2P',ui-monospace,Menlo,monospace;text-align:center;overflow-x:hidden}
+body:before{content:'';position:fixed;left:0;right:0;bottom:0;height:34vh;z-index:-1;background:linear-gradient(90deg,rgba(127,232,255,.25) 2px,transparent 2px) 0 0/64px 64px,linear-gradient(rgba(255,90,138,.25) 2px,transparent 2px) 0 0/64px 64px;transform:perspective(300px) rotateX(60deg);transform-origin:50% 100%;-webkit-mask-image:linear-gradient(transparent,#000);mask-image:linear-gradient(transparent,#000)}
+main{max-width:980px;margin:0 auto;padding:clamp(28px,7vh,64px) 16px 40px}
+h1{margin:0;font-size:clamp(26px,8vw,58px);line-height:1.2;font-weight:400;text-shadow:3px 0 #ff2d7a,-3px 0 #4fd8ff,0 0 28px rgba(255,150,90,.6)}
+h1 span{display:block;color:var(--cy)}
+.by{margin:18px 0 26px;font-size:clamp(8px,2.4vw,12px);color:var(--mu);letter-spacing:1px}
+.by b{font-weight:400;color:var(--fg)}
+.btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:34px}
+.btn{font:inherit;font-size:clamp(9px,2.6vw,12px);padding:16px 22px;border-radius:10px;cursor:pointer;text-decoration:none;border:2px solid var(--cy);color:var(--cy);background:rgba(30,12,50,.6);box-shadow:0 0 16px rgba(127,232,255,.35);transition:transform .15s,background .15s}
+.btn.p{border-color:var(--fg);color:#1d0a2e;background:linear-gradient(90deg,#ffb35a,#ffe9a8);box-shadow:0 0 22px rgba(255,179,90,.55)}
+.btn:hover{transform:translateY(-2px)}
+.btn[disabled]{opacity:.5;cursor:default;transform:none}
+.frame{position:relative;width:100%;aspect-ratio:16/10;border:3px solid var(--cy);border-radius:14px;overflow:hidden;background:#000;box-shadow:0 0 32px rgba(127,232,255,.35),0 0 90px rgba(255,90,138,.25)}
+.frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+@media(max-width:640px){.frame{aspect-ratio:4/5}}
+.fs{margin-top:14px}
+.note{margin:14px 0 0;font-size:8px;line-height:1.8;color:var(--mu)}
+footer{margin-top:40px;font-size:8px;color:var(--mu)}
